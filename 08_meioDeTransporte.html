@@ -6,12 +6,13 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
-
+    const precolitro = parseFloat(prompt(`Qual o preço do litro de combustível?`))
+    const litro = parseFloat(prompt(`Quantos litros você usa para ir e voltar ao trabalho diariamente?`))
+    const tp = parseFloat(prompt(`Qual o preço do transporte público para se deslocar ao trabalho diariamente?`)).toFixed(2)
     //Processamento
-
-    
+    const valor = (precolitro * litro).toFixed(2)
+    let mensagem= (valor > tp) ? `O valor do transporte público é de R$${tp}, sendo mais BARATO que o valor que você paga para se deslocar para o trabalho, que é de R$${valor}` : (valor < tp) ? `O valor do transporte público é de R$${tp}, sendo mais CARO que o valor que você paga para se deslocar para o trabalho, que é de R$${valor}` : `Os valores são iguais`
     //Saída
-
+    alert(`${mensagem}`)
     
 </script>

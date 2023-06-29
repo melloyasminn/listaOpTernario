@@ -8,11 +8,14 @@
     // - cães grandes: fator 7.
 
     //Entrada
-
-
+    const idadehumana = parseInt(prompt(`Qual a idade humana do seu cachorrro?`))
+    const porte = prompt(`Qual o prote o seu cachorro? Responda P para pequeno, M para médio e G para grande`).toUpperCase().trim()
+    const pp = idadehumana * 5
+    const pm = idadehumana * 6
+    const pg = idadehumana * 7
     //Processamento
-
+let mensagem = (porte =="P")? `A idade do seu cachorro, na idade de cachorro é de ${pp}`: (porte =="M")? `A idade do seu cachorro, na idade de cachorro é de ${pm}` : (porte == "G") ?`A idade do seu cachorro, na idade de cachorro é de ${pg}`: `Valor inválido`
     
     //Saída
-
+    alert(`${mensagem}`)
 </script>

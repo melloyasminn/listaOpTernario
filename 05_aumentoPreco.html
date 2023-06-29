@@ -8,10 +8,14 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-
-
+    const precoproduto = parseInt(prompt(`Qual o valor do produto?`));
+    const aumento1 = ( precoproduto +(precoproduto *0.2)) ;
+    const aumento2 = ( precoproduto + (precoproduto*0.15));
+    const aumento3 = ( precoproduto + (precoproduto*0.1));
+    const aumento4 = ( precoproduto+ (precoproduto*0.05));
+    let mensagem = (precoproduto <= 280) ? ` o valor, com o aumento é de ${aumento1}` : (precoproduto>280 && precoproduto <=700) ?  `O valor, com o aumento é de ${aumento2}`: (precoproduto> 700 && precoproduto<= 1500) ? `O valor, com o aumento é de ${aumento3}`: `O valor do produto com o aumento é de ${aumento4}`;
     //Processamento
-
+    alert(`${mensagem}`)
     
     //Saída
 
