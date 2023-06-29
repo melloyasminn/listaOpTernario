@@ -8,11 +8,15 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
-
+    const horas = parseInt(prompt(`Quantas horas você trabalha semanalmente?`))
+    const valorporhora = parseFloat(prompt(`Quanto você ganha por hora?` ))
     //Processamento
+    const ganhoSemana = horas * valorporhora;
+   
 
-    
     //Saída
-
+    let mensagem = (horas <= 45) ? `O seu salário final é de ${ganhoSemana} e você ganha ${(ganhoSemana/ horas)} por hora trabalhada`
+    : (horas <= 60) ? `O seu salário final é de ${(valorporhora + (valorporhora*0.2)) * horas} e você ganha ${((valorporhora + (valorporhora*0.2)) * horas/ horas)} por hora trabalhada`
+    : `O seu salário final é de ${(valorporhora + (valorporhora*0.3)) * horas} e você ganha ${((valorporhora + (valorporhora*0.3)) * horas / horas)} por hora trabalhada.`;
+    alert(mensagem);
 </script>
